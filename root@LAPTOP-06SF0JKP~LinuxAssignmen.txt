@@ -1,0 +1,151 @@
+Problem 1.
+
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# ls  //to see all folders and files
+File1.txt
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# mkdir docs  //to create directory
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# ls
+File1.txt  docs
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cp File1.txt File2.txt  //to copy one file into another
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# ls
+File1.txt  File2.txt  docs
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# mv File2.txt docs  //to move file File2.txt into docs folder
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# ls
+File1.txt  docs
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cd docs  //to enter in docs folder
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# cat File2.txt  //to open and to edit text file
+Hello CDAC
+LS
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# chmod u+rwx File2.txt  //to give permission to user/owner of read,write,execute
+
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# ls -l File2.txt  //to see given permission of user/owner,other user,group
+-rwxr--r-- 1 root root 14 Mar  7 19:37 File2.txt
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# chmod o=r File2.txt //to give read permission to other user
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# ls -l File2.txt
+-rwxr--r-- 1 root root 14 Mar  7 19:37 File2.txt
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# chmod g=r File2.txt  //to give permission of read to group
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# ls -l File2.txt
+-rwxr--r-- 1 root root 14 Mar  7 19:37 File2.txt
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs#
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# pwd  //to see present work directory
+/root/LinuxAssignment/docs
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# ls *.txt  //to see available text files in folder
+File1.txt
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# cat File2.txt  //to see containt in text file
+Hello CDAC
+LS
+root@LAPTOP-06SF0JKP:/# date  //to display current date and time
+Thu Mar  7 20:55:08 IST 2024
+root@LAPTOP-06SF0JKP:/# hostname -I  //to display IP address
+172.19.106.212
+root@LAPTOP-06SF0JKP:/# ping 127.0.0.1  //ping a remote server to check connectivity
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=2.76 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.034 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.048 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.052 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.044 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.041 ms
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs# zip -r docs.zip . -i docs  //to compress docs directory int zip file
+        zip warning: zip file empty
+root@LAPTOP-06SF0JKP:~/LinuxAssignment/docs#
+root@LAPTOP-06SF0JKP:~# vi editor file1.txt  //to edit the text file
+2 files to edit
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cat file1.txt  //to see containt in the text file
+ls
+
+clear
+
+
+
+Problem 2.
+
+root@LAPTOP-06SF0JKP:~# ls
+Dashrath  Family  File.sh  India  LinuxAssignment  Maharashtra.sh  snap
+root@LAPTOP-06SF0JKP:~# cd LinuxAssignment
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cat > Data.txt  //to create text file
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# head -n 10 data.txt  //to see first 10 lines of the text file
+Asia is the largest continent by both land area and population.
+It spans across diverse landscapes, from deserts to rainforests.
+Mount Everest, the tallest mountain on Earth, lies in Asia.
+It's home to ancient civilizations like Mesopotamia and the Indus Valley.
+Asia boasts rich cultural diversity with thousands of languages spoken.
+The continent is a melting pot of religions, including Islam, Buddhism, Hinduism, and Christianity.
+The Great Wall of China is one of Asia's most iconic landmarks.
+Japan's cherry blossoms draw millions of tourists annually.
+Asia has a significant influence on global economics and trade.
+The Silk Road connected Asia with Europe for centuries.
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# tail -n 5 data.txt  //to see the last 5 lines of the text files
+Ancient wonders like the Taj Mahal and Angkor Wat attract tourists worldwide.
+Asia is at the forefront of technological advancements, with countries like South Korea and Japan leading in innovation.
+The continent has a rich history of martial arts, including karate and kung fu.
+Confucianism, originating in Asia, has greatly influenced societal norms and values.
+Asia's rapid urbanization poses both challenges and opportunities for sustainable developmentroot
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cat > Numbers.txt  //to create text files, to save files press ctrl+d
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# head -n 15 Numbers.txt  //to see first 15 numbers of text files
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# tail -n 3 Numbers.txt  //to see last 3 numbers of Numbers.txt file
+18
+19
+20
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cat > input.txt  //to create text file with the name input.txt
+in a small village nestled among rolling hills, life moves at a gentle pace. the locals know each other by name, and the sense of community is strong. every morning, the aroma of freshly brewed coffee fills the air, and the sound of birds chirping welcomes the day. it's a place where time seems to stand still, offering tranquility and peace amidst the chaos of the world.
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# tr '[:lower:]' '[:upper:]' < input.txt > output.txt  //to change all small letters of input.txt file into capital letters in output.txt file
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cat output.txt
+IN A SMALL VILLAGE NESTLED AMONG ROLLING HILLS, LIFE MOVES AT A GENTLE PACE. THE LOCALS KNOW EACH OTHER BY NAME, AND THE SENSE OF COMMUNITY IS STRONG. EVERY MORNING, THE AROMA OF FRESHLY BREWED COFFEE FILLS THE AIR, AND THE SOUND OF BIRDS CHIRPING WELCOMES THE DAY. IT'S A PLACE WHERE TIME SEEMS TO STAND STILL, OFFERING TRANQUILITY AND PEACE AMIDST THE CHAOS OF THE WORLD.
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# sort duplicate.txt | uniq  //to display only unique lines
+In the heart of the bustling city, skyscrapers tower above, casting long shadows over crowded streets. People rush past each other, lost in their own worlds, their footsteps echoing against the concrete pavement. The city never sleeps, its lights flickering like stars in the night sky, illuminating the endless stream of traffic below. It's a place of constant motion, where dreams are born and ambitions thrive. Amidst the chaos, there's a sense of energy and excitement that permeates the air, drawing people from all walks of life. In the heart of the bustling city, skyscrapers tower above...
+n the heart of the bustling city, skyscrapers tower above, casting long shadows over crowded streets. People rush past each other, lost in their own worlds, their footsteps echoing against the concrete pavement. The city never sleeps, its lights flickering like stars in the night sky, illuminating the endless stream of traffic below.
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# cat > fruit.txt  //to create text file
+Orange
+Banana
+Apple
+Apple
+Banana
+Orange
+Apple
+Orange
+Banana
+Apple
+Apple
+root@LAPTOP-06SF0JKP:~/LinuxAssignment# sort fruit.txt | uniq -c  //to see unique fruit names
+      5 Apple
+      3 Banana
+      3 Orange
+
+
+
+
